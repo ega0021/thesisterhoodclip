@@ -109,6 +109,28 @@
             left: 90%;
             animation-delay: 3s;
         }
+        .under-construction {
+            position: fixed; /* Use fixed positioning for reliable placement */
+            bottom: 20px; /* Adjust bottom margin as needed */
+            right: 20px; /* Adjust right margin as needed */
+            transform: none; /* Remove the initial rotation */
+            background: rgba(243, 193, 210, 0.9);
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            z-index: 10;
+        }
+
+        @media (max-width: 600px) {
+            .under-construction {
+                font-size: 12px;
+                padding: 6px 10px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -121,6 +143,9 @@
     </div>
     <div class="logo-container">
         <img src="logo.png" alt="Logo del proyecto">
+    </div>
+    <div class="under-construction ribbon">
+        Bajo construcción
     </div>
 </body>
 </html>

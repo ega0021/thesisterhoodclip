@@ -41,9 +41,11 @@ function mostrarProductos(productos, criterio) {
         divProducto.innerHTML = /* html */`
             <a href="/html/e-commerce/products/${producto.sku}.html">
                 <img src="${producto.fotos.portada}" width="200">
-                <h2>${producto.nombre}</h2>
-                <p>${producto.precio.toFixed(2)} €</p>
-            </a>
+                <p class="precio">${producto.precio.toFixed(2)} €</p>
+                <h2 class="nombre">${producto.nombre}</h2>
+                <p class="descripcion">${producto.descripcion_corta}</p>
+                </a>
+            <button class="btn-carrito" type="button" onclick="alert('¡Artículo añadido al carrito! 🛒')">AÑADIR AL CARRITO</button>
         `;
         contenedor.appendChild(divProducto);
     });
